@@ -1,9 +1,21 @@
 class RingBuffer:
     def __init__(self, capacity):
-        pass
+        self.capacity = capacity
+        self.storage = []
 
     def append(self, item):
-        pass
+        
+        if len(storage) is not self.capacity:
+            self.storage.append(item)
+        
+
 
     def get(self):
-        pass
+        return self.storage
+
+
+newbuffer = RingBuffer(5)
+
+newbuffer.append('a')
+
+print(newbuffer.get())
