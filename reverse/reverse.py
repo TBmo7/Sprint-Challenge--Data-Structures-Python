@@ -58,6 +58,15 @@ class LinkedList:
          <-[] <- [] -> []
         and so on
         
+        while current:
+            next_node = current.next
+            current.next_node = previous_node < here we swap the pointer
+            previous_node = current < here is where we shift over one, from none to the head
+            current = next_node and we finish the shift here
+
+            
+
+
 
         """
         
