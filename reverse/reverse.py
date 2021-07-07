@@ -39,4 +39,48 @@ class LinkedList:
         return False
 
     def reverse_list(self, node, prev):
-        pass
+
+        """
+        Don't need to move the list items, just the "next" pointers
+        So we need to know what node that we're on = current
+        what node comes next = nextnode or next_node
+        and what node came before = prev_node
+
+        we start at the head, current is the head, there is no previous
+        start loop
+        on the head of the list, change current.prev to current.next
+        change the previous node to the current node, starting to shuffle through
+        and then change the current node to the next node
+        This way we iterate through the list and change the pointers
+
+         [] -> [] -> [] ->
+         <-[] -> [] -> []
+         <-[] <- [] -> []
+        and so on
+        
+        while current:
+            next_node = current.next
+            current.next_node = previous_node < here we swap the pointer
+            previous_node = current < here is where we shift over one, from none to the head
+            current = next_node and we finish the shift here
+
+            
+
+
+
+        """
+        
+        current = self.head
+        previous_node = None
+        
+        if not current:
+            return
+        while current:
+            next_node = current.get_next()
+            current.next_node = previous_node
+            previous_node = current
+            current = next_node
+        self.head = previous_node
+
+
+                
